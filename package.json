@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "js": "^0.1.0",
+    "mongoose": "^8.4.1",
+    "nanoid": "^5.0.7",
+    "node": "^20.14.0",
+    "nodemon": "^3.1.2",
+    "shortid": "^2.2.16"
+  },
+  "name": "urlshorter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Santosh Saroj",
+  "license": "ISC",
+  "description": ""
+}
