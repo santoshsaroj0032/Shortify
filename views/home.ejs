@@ -44,15 +44,19 @@
         }
 
         .navbar {
-            background-color: #02010b;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 2px solid red;
-            border-top: 2px solid red whitesmoke;
-            margin-top: 0;
-        }
+    background-color: #02010b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid red;
+    border-top: 2px solid whitesmoke;
+    margin-top: 0;
+    background-image: url("short_icon.png");
+    background-repeat: no-repeat; /* Ensure the image does not repeat */
+    background-position: center; /* Position the image in the center */
+}
+
 
         .navbar img {
             width: 40px;
@@ -287,7 +291,7 @@
 
 <body>
     <nav class="navbar">
-        <img src="short_icon.png" alt="Shortify Logo">
+        <!-- <img src="short_icon.png" alt="Shortify Logo"> -->
         <h1><span>S</span>ho<span>r</span>ti<span>f</span>y</h1>
     </nav>
 
