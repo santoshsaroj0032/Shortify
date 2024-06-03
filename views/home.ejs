@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shortify|URL Shortener</title>
+    <title>Shortify | URL Shortener</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -20,9 +20,11 @@
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
@@ -82,7 +84,7 @@
             margin-top: 20px;
             text-align: center;
             max-width: 400px;
-         }
+        }
 
         .copy-btn {
             background-color: rgb(6, 1, 30);
@@ -106,7 +108,7 @@
             align-items: center;
             flex-direction: column;
             margin-top: 60px;
-            /* max-width: 400px; */
+            padding: 0 20px;
         }
 
         form {
@@ -118,9 +120,9 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: 20px;
-            width: 500px;
+            width: 100%;
+            max-width: 500px;
             border: 2px solid rgb(190, 3, 3);
-            
         }
 
         label {
@@ -177,40 +179,116 @@
             color: white;
         }
 
-
-        .url-generated  label{
+        .url-generated label {
             -webkit-text-fill-color: rgb(56, 48, 48);
             font-weight: 600;
-
         }
-        .container  form label{
+
+        .container form label {
             margin-bottom: 10px;
             padding-bottom: 10px;
             color: rgb(63, 3, 3);
             letter-spacing: 2px;
-         }
-         .container  form input{
+        }
+
+        .container form input {
             border: 1px solid rgb(81, 4, 4);
-         }
-         @media only screen and (max-width: 500px) {
-    /* Adjust styles for smaller screens */
-    .container {
-        margin-top: 30px;
-    }
+        }
 
-    form {
-        width: 90%;
-    }
-}
+        @media only screen and (max-width: 768px) {
+            .navbar h1 {
+                font-size: 28px;
+            }
 
+            .navbar img {
+                width: 30px;
+                height: 30px;
+            }
 
+            .navbar {
+                padding: 10px 0;
+            }
+
+            form {
+                padding: 20px;
+                width: 90%;
+            }
+
+            .url-generated {
+                padding: 15px;
+                margin-top: 15px;
+            }
+
+            .copy-btn {
+                padding: 8px 16px;
+            }
+
+            table th,
+            table td {
+                padding: 8px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .navbar h1 {
+                font-size: 24px;
+            }
+
+            .navbar img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .navbar {
+                padding: 5px 0;
+            }
+
+            form {
+                padding: 15px;
+                width: 90%;
+            }
+
+            .url-generated {
+                padding: 10px;
+                margin-top: 10px;
+            }
+
+            .copy-btn {
+                padding: 6px 12px;
+            }
+
+            table th,
+            table td {
+                padding: 6px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            label {
+                font-size: 16px;
+            }
+
+            input[type="text"] {
+                padding: 8px;
+            }
+
+            button {
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
         <img src="short_icon.png" alt="Shortify Logo">
-        <h1> <span>S</span>ho<span>r</span>ti<span>f</span>y </h1>
+        <h1><span>S</span>ho<span>r</span>ti<span>f</span>y</h1>
     </nav>
 
     <div class="container">
@@ -222,8 +300,8 @@
 
         <% if (locals.id) { %>
         <div class="url-generated">
-              <label>Generated URL</label>
-              <p> <span>http://localhost:7000/url/<%= id %></span></p>
+            <label>Generated URL</label>
+            <p><span>http://localhost:7000/url/<%= id %></span></p>
             <button class="copy-btn" onclick="copyToClipboard('http://localhost:7000/url/<%= id %>')">Copy URL</button>
         </div>
         <% } %>
@@ -254,9 +332,9 @@
 
     <script>
         function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
+            navigator.clipboard.writeText(text).then(function () {
                 alert('URL copied to clipboard!');
-            }, function(err) {
+            }, function (err) {
                 console.error('Could not copy text: ', err);
             });
         }
