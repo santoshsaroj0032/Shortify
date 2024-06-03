@@ -19,6 +19,10 @@ connectToMongoDB("mongodb+srv://santoshsaroj0032:dTlE2ZNxnWhQPALr@cluster0.mkmko
 
 // Middleware to parse JSON
 app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
+
+
 
 // Routes
 app.use("/url", urlRoute);
