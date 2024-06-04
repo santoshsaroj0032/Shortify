@@ -7,14 +7,20 @@
     <title>Shortify | URL Shortener</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            background: linear-gradient(270deg, #05070d, #0d0e17, #131628, #181a32);
-            background-size: 800% 800%;
-            animation: gradient 10s ease infinite;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  body {
+    /* Use a linear gradient as a fallback in case the image doesn't load */
+    background: linear-gradient(270deg, #05070d, #0d0e17, #131628, #181a32);
+    background-size: 800% 800%;
+    animation: gradient 10s ease infinite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-image: url("/images/background.png"); */
+    /* background-repeat: no-repeat;  /* Ensures the image doesn't repeat */
+    /* background-size: cover;  Makes the image cover the entire body */
+    /* background-position: center;  Centers the image */ 
+}
+
 
         @keyframes gradient {
             0% {
@@ -291,7 +297,7 @@
 
 <body>
     <nav class="navbar">
-        <!-- <img src="short_icon.png" alt="Shortify Logo"> -->
+ <!-- <img src="/images/short_icon.png" alt="logo"> -->
         <h1><span>S</span>ho<span>r</span>ti<span>f</span>y</h1>
     </nav>
 

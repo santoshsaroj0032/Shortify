@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require('mongoose');
 const router = express.Router();
-
+ 
 // Define the schema for URLs
 const urlSchema = new mongoose.Schema({
     originalUrl: { type: String, required: true },
