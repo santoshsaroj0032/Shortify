@@ -9,7 +9,7 @@ const URL = require("./models/url");
 
 
 const urlRoute = require("./routes/url");
-const staticRoute = require("./routes/staticRouter");
+const staticRoute = require("./routes/staticRouter"); 
 const userRoute = require("./routes/user");
 
 
