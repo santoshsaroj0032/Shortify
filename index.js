@@ -15,7 +15,7 @@ const userRoute = require("./routes/user");
 
 
  
-const app = express(); 
+const app = express();  
 const PORT = 7000;
 
 // Set the view engine to EJS
